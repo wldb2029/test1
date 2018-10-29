@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>직무능력평가1</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            
+            body {
+                font-family: '210 M고딕 030', '210 M고딕 040', '210 M고딕 050', '210 트리거';
+                background-color: #fafafa;
+            }
+            
+            /* 헤더 */
+            header {
+                max-width: 1200px;
+            }
+            
+            /* 사이트 이름 */
+            #headA #headA_h1 a{
+                display: inline-block;
+                line-height: 50px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-bottom: 0px;
+                color: black;
+                font-size: 20px;
+                text-decoration: none;
+                font-family: "210 수명조 020";
+            }
+            #headA #headA_h1 a:hover {
+                color: #ea2965;
+                text-decoration: none;
+                font-family: "모리스9";
+            }
+            #headA p {
+                margin: 0px;
+                display: inline-block;
+                padding-top: 0px;
+                padding-left: 20px;
+                padding-right: 10px;
+                font-size: 12px;
+            }
+            #headA {
+                max-width: 1000px;
+                float: left;
+            }
+            #headC {
+                float: right;
+                margin-right: 15px;
+                color: #ffffff;
+                padding-bottom: 16px;
+            }
+            
+            /* 메인 메뉴 */
+            #h_menu ul {
+                margin: 0;
+                padding: 0;
+                margin-top: 10px;
+            }
+            #h_menu li {
+                list-style-type: none;
+                display: inline-block;
+                padding: 0px 0px 5px 0px;
+                margin-top: 18px;
+            }
+            #h_menu li a {
+                text-decoration: none;
+                color: black;
+                padding: 20px 5px;
+                margin-top: 10px;
+            }
+            #h_menu a:hover {
+                text-decoration: none;
+                color: #ea2965;
+                border-bottom: 2px dotted #ea2965;
+                font-family: "모리스9";
+            }
+            
+            .conB {
+                margin-bottom: 10px;
+            }
+            
+            /* 사이트 링크 주소 처리 */
+            .site {
+                text-decoration: none;
+                color: #888888;
+                font-weight: bold;
+            }
+            .site:hover {
+                text-decoration: underline;
+            }
+            
+            /* 저작권 */
+            #footer {
+                border-top: 1px solid #dddddd;
+                margin-top: 20px;
+                margin-bottom: 30px;
+            }
+            #footer p {
+                font-size: 14px;
+                color: #666666;
+                margin-left: 15px;
+                margin-top: 5px;
+            }
+            #footer span {
+                font-size: 12px;
+                font-weight: normal;
+                margin-left: 14px;
+            }
+            
+            /* float 해제 */
+            .clear {
+                clear: both;
+            }
+            
+            /* 본문 내용 배치 */
+            #wrapper {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            
+            /* profile CSS */
+            
+            h1 {
+                color: black;
+                font-family: "210 트리거";
+                font-size: 40px;
+                text-align: center;
+                margin: 20px;
+            }
+            h2 {
+                color: black;
+                font-size: 18px;
+                text-decoration: none;
+            }
+            h3 {
+                font-size: 15px;
+            }
+            p {
+                color: 444444;
+                font-size: 15px;
+                line-height: 150%;
+            }
+            #logo {
+                text-align: center;
+                margin: 30px;
+            }
+            #img_main {
+                border: 1px solid #ffffff;
+                border-radius: 20%;
+            }
+            #main {
+                text-align: center;
+                margin: 10px;
+            }
+            #content {
+                border: 8px solid #ea2965;
+                padding: 20px;
+                margin-bottom: 30px;
+                margin: 20px;
+            }
+            #content p {
+                font-size: 14px;
+            }
+            #content span {
+                font-size: 12px;
+                font-weight: normal;
+                margin-left: 18px;
+            }
+        </style>
+
+</head>
+<body>
+<!-- 헤더 -->
+  <header>
+   <div id="headA">
+       <h1 id= "headA_h1"><a href="index.html">J.Princess</a></h1>
+       </div>
+       
+        <div id="headC">
+            <ul id="h_menu">
+                <li><a href="hw01.html" target="_blank">과제01</a></li>
+                <li><a href="hw02.html" target="_blank">과제02</a></li>
+                <li><a href="hw03.html" target="_blank">과제03</a></li>
+                <li><a href="hw04.html" target="_blank">과제04</a></li>
+                <li><a href="hw05.html" target="_blank">과제05</a></li>
+                <li><a href="portfolio.html" target="_blank">Portfolio</a></li>
+            </ul>
+            </div>
+        </header>
+        
+        <!-- float 해제-->
+        <div class="clear"></div>
+        
+        <div id="wrapper">
+            <!-- 본문 제목 -->
+                <section class="conB">
+                   <div class="continar">
+                    <div class="text">
+                        <p>계원예술대학교 18학번</p>
+                        <span>쥬쥬 프린세스 <img src="./img/heart.png" alt="하트" width="18"></span>
+                    </div>
+                </div>
+            </section>
+       
+       <!-- 본문 내용 시작 -->
+       <section class="conC">
+          <article>
+              <h1>Content Programming</h1>
+              <div id="logo">
+                  <img id="img_main" src="./img/mypoto.jpg" width="300" hight="300">
+              </div>
+              <div id="main">
+                  <h2>디지털 미디어 디자인과</h2>
+                  <h3>1학년 B반 김지유</h3>
+              </div>
+              <div id="content">
+                  <p>현재 계원예술대학교 디지털미디어디자인과에 재학 중인 18학번 김지유입니다.<br> 그림과 풍경사진을 찍는 것을 좋아하며 취미는 뮤지컬, 영화 관람입니다.</p>
+                  <hr>
+                  <p>가능한 툴 : Adobe Potoshop / Adobe Illustrator / Adobe After Effect / Unity / 3D Max<br>
+                  관심분야 : 일러스트, 게임 그래픽, 영상 컨텐츠 제작 등
+                  </p>
+              </div>
+          </article>
+       </section>
+    </div>
+    <!-- 본문 내용 끝 -->
+
+    <!-- 저작권 -->
+    <footer>
+        <div id="footer">
+            <p>
+                Copylight &copy <a href="index.html" class="site">J.princess</a> ALL rights reserved.
+            </p>
+            <span>EMAIL : zbxl444@naver.com</span>
+        </div>
+    </footer>
+   
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork #3</title>
+    <style>
+        #logo {
+            font-family: "210 수필명조 020";
+            text-decoration: none;
+        }
+        #logo a:hover {
+            text-decoration: none;
+            font-family: "모리스9";
+        }
+        #wrapper {
+            text-align: center;
+        }
+        body {
+            background-image: url(img/cloud.png);
+            font-family: "210 M고딕 030";
+        }
+        h2 {
+            font-family: "210 트리거";
+        }
+        h3 {
+            font-family: "210 M고딕 050"
+        }
+        h4 {
+            font-family: "210 M고딕 040"
+        }
+        ul {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        ul li {
+            list-style-position: outside;
+        }
+        #food {
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+        }
+        #food li{
+            list-style-position: inside;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        a:hover {
+            color: #004d7e;
+            font-family: "모리스9";
+            text-decoration: underline;
+        }
+        #plan {
+            margin-left: 150px;
+            margin-right: 150px;
+            border-collapse: collapse;
+        } 
+        #col1 {
+            background-color: #8bc0ed;
+            height: 30px;
+            text-align: center;
+        }
+        .day {
+            background-color: #e3e3e3;
+            padding: 10px;
+        }
+        
+        #fee {
+            font-size: 15px;
+            border: 3px dotted #2d6c9a;
+            padding: 10px 10px 10px 10px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<!-- 인덱스 버튼 -->
+   <div id=logo><p>
+    <a href="index.html">J.Princess</a>
+       </p></div>
+   <!-- 버튼 끝 -->
+  <!-- 서론 -->
+  <div id="wrapper">
+   <h2>일본 여행</h2>
+   <ul>
+       <li>기간 : 2월 5일~ 7일</li>
+       <li>목적 : 일본의 다양한 먹거리 체험과 출사</li>
+       <li>총경비 : 30000엔</li>
+   </ul>
+   <hr>
+   <!-- 서론 끝 -->
+   
+   <h3>먹고 싶은 것</h3>
+   <ol id="food">
+       <h4><li>오코노미야끼</li></h4>
+       <img src="./img/okonomi.jpg" width="450" hight="450"><br>
+    일본식 부침개. 오징어와 베이컨, 새우 등이 들어간다.<br>
+      <a href="https://digjapan.travel/ko/blog/id=10497" target="_blank">오사카 오코노미야끼 맛집 BEST 6</a>
+       <h4><li>타코야끼</li></h4>
+       <img src="./img/tako.png" width="450" hight="450"><br>
+       반죽에 문어를 넣어 동그랗게 구운 음식. <br>
+       <a href="https://brunch.co.kr/@allstay/101" target="_blank">오사카 타코야끼 맛집 BEST 5</a>
+       <h4><li>당고</li></h4>
+       <img src="./img/dango.png" width="450" hight="450"><br>
+       쌀가루이나 밀가루에 따뜻한 물을 부어 만든 반죽을 삶거나 찐 후 작고 둥글게 빚어 만든 일본의 대표 화과자.<br>
+       <a href="https://barbieone.blog.me/221163889182" target="_blank">오사카 당고 맛집</a><br>
+       <a href="http://long-for.tistory.com/8" target="_blank">관련 링크</a>
+       <h4><li>파블로 타르트</li></h4>
+       <img src="./img/tart.jpg" width="450" hight="450"><br>
+       오사카에 가면 꼭 먹어야한다는 디저트인 파블로의 에그 타르트. 맛있겠다.<br>
+       <a href="https://blog.naver.com/leejh9818?Redirect=Log&logNo=221334841610" target="_blank">관련 링크</a>
+   </ol>
+   
+   <!-- 표 시작 -->
+    <h3>여행 일정</h3>
+    <div id="plan">
+    <table>
+        <tr id="col1">
+            <th>날짜</th>
+            <th>장소</th>
+            <th colspan="2">경비(쇼핑/교통)</th>
+        </tr>
+           <tr>
+            <td rowspan="3" class="day">1일차</td>
+            <td>고베</td>
+            <td rowspan="3">10000엔</td>
+            <td rowspan="3">1200엔</td>
+        </tr>
+           <tr>
+            <td>이쿠타 신사</td>
+        </tr>
+           <tr>
+            <td>돈키호테</td>
+        </tr>
+           <tr>
+            <td rowspan="3" class="day">2일차</td>
+            <td>난바 센니치마에</td>
+            <td rowspan="3">6000엔</td>
+            <td rowspan="3">1100엔</td>
+        </tr>
+           <tr>
+            <td>도톤보리</td>
+        </tr>
+           <tr>
+            <td>파블로 타르트</td>
+        </tr>
+           <tr>
+            <td rowspan="3" class="day">3일차</td>
+            <td>하루카스 300</td>
+            <td rowspan="3">4500엔</td>
+            <td rowspan="3">1500엔</td>
+        </tr>
+           <tr>
+            <td>금각사</td>
+        </tr>
+           <tr>
+            <td>텐류지</td>
+        </tr>
+    </table>
+    </div>
+    <!-- 표 끝 -->
+    
+    <h3>출사 장소</h3>
+    <ul>
+        <h4><li>하루카스 300</li></h4>
+         <img src="./img/haru.jpg" width="450" hight="450"><br>
+        오사카의 야경 명소. 오전 9시부터 밤 10시까지 365일 운영하며, '아베노베아' 라는 하루카스 300의 마스코트 곰이 때때로 모습을 드러낸다고 한다. <br>
+            <div id="fee">
+            <ins>입장료<br></ins>
+            어른 15,00엔 / 중고생 1,200엔<br>
+                초등학생 700엔 / 유아(4세이상) 500엔<br>
+            </div>
+       <small>※출처 : https://m.post.naver.com/viewer/postView.nhn?volumeNo=9597467&memberNo=1974376</small>
+        <h4><li>이쿠타 신사</li></h4>
+         <img src="./img/ikuta.jpg" width="450" hight="450"><br>
+        이쿠타신사는 201년도에 세워져 1800년 이상의 역사를 자랑하는 일본의 유서 깊은 신사이다.<br> 홍수와 전쟁, 한신 대지진 등 큰 재해가 있었어도 늘 피해를 입지 않아 부활의 신이라고도 불린다. <br>고베의 중심인 산노미야역에서 도보 5분 정도의 거리에 위치해 있어 일본 전국, 세계 각지에서 많은 참배객들이 방문하고 있다.<br>
+        <small>※출처 : http://jsksoft.tistory.com/10690</small>
+        <h4><li>금각사</li></h4>
+         <img src="./img/gold.jpg" width="450" hight="450"><br>
+        금각사는 정식으로는 로쿠온사라는 임제종 소코쿠지파의 사찰.<br> 
+        1397년 무로마치막부 3대 장군 아시카가 요시미쓰가 건립한 산장 "키타야마전"을 이후에 선사로 한 것으로 금빛으로 빛나는 사리전 "킨카쿠"이 유명하다.<br>
+        세계문화유산에 선정되어 있다. 경내에는 회유식정원이 있어 교코지에 이전한 킨카쿠는 절호의 촬영장소로 되어 있다.<br>
+        <small>※출처 : https://www.japanhoppers.com/ko/kansai/kyoto/kanko/1520/</small>
+        <h4><li>텐류지</li></h4>
+         <img src="./img/ten.jpg" width="450" hight="450"><br>
+        아라시야마 공원에서 걸어서 얼마 안가면 있는 텐류지는, 선종교의 대본산이며 세계 문화 유산에 등재된 절이다.<br> 절 건물 자체의 화려함은 없지만, 봄에는 벚꽃, 가을엔 단풍이 아름다운 정원으로 유명하다.<br> 원래는 꽤 넓은 부지의 절이였지만, 반복된 화재로 인해 지금 건물이 서 있는 것은 소량이 복구된 것이라고 한다.<br>
+        <small>※출처 : https://ko.japantravel.com/%EA%B5%90%ED%86%A0/%EC%A0%95%EC%9B%90%EC%9D%B4-%EC%95%84%EB%A6%84%EB%8B%A4%EC%9A%B4-%EC%A0%88-%ED%85%90%EB%A5%98%EC%A7%80-%E5%A4%A9%E9%BE%8D%E5%AF%BA/19853</small>
+    </ul>
+    </div>
+</body>
+</html>
