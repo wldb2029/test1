@@ -5,52 +5,246 @@
     <title>contact</title>
     
     <style>
-     /*메뉴*/
-        #headC {
+     
+        /* 헤더 */
+            header {
+                max-width: 1200px;
+            }
+            
+            /* 사이트 이름 */
+            #headA #headA_h1 a{
+                display: inline-block;
+                padding-top: 100px;
+                padding-left: 750px;
+                padding-bottom: 70px;
+                line-height: 0;
+                color: #ea2965;
+                font-size: 32px;
+                text-decoration: none;
+                font-family: "모리스9"
+            }
+    
+            #headA #headA_h1 a:hover {
+                color: black;
+                text-align: center;
+                font-size: 15px;
+                padding-left: 730px;
+                text-decoration: none;
+                font-family: "210 트리거";
+            }
+            #headA p {
+                margin: 0px;
+                display: inline-block;
+                padding-top: 0px;
+                padding-left: 20px;
+                padding-right: 10px;
+                font-size: 12px;
+            }
+            #headA {
+                max-width: 1000px;
+                float: left;
+            }
+            #headC {
                 float: right;
+                margin-top: 30px;
+                margin-bottom: 30px;
                 margin-right: 15px;
                 color: #ffffff;
-            padding-bottom: 16px;
+                padding-bottom: 16px;
+            }
+            
+        /* 메인 메뉴 */
+        .main_menu {
+            font-family: '210 M고딕 050';
+            position: fixed;
+            right: 50%;
+            top: 170px;
+            width: 120px;
+            margin-right: 550px;
+            text-align: center;
+    
         }
-         #h_menu ul {
-                margin: 0;
-                padding: 0;
-                margin-top: 10px;
-            }
-            #h_menu li {
-                list-style-type: none;
-                display: inline-block;
-                padding: 0px 0px 5px 0px;
-                margin-top: 18px;
-            }
-            #h_menu li a {
-                text-decoration: none;
-                color: black;
-                padding: 20px 5px;
-                margin-top: 10px;
-            }
-            #h_menu a:hover {
-                text-decoration: none;
-                color: #ea2965;
-                border-bottom: 2px dotted #ea2965;
-                font-family: "모리스9";
-            }
-         /* 버튼 */
-    #logo a{
-                display: inline-block;
-                line-height: 50px;
-                padding-left: 20px;
-                padding-right: 20px;
-                padding-bottom: 0px;
-                color: black;
-                font-size: 20px;
-                text-decoration: none;
-                font-family: "210 수명조 020";
-            }
-            #logo a:hover {
-                color: #ea2965;
-                text-decoration: none;
-                font-family: "모리스9";
+
+        .main_menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .main_menu ul li {
+            transition: 0.3s;
+        }
+
+        .main_menu ul li:hover {
+            border-bottom: 1.5px solid #ea2965;
+            font-family: '모리스9'
+        }
+
+        .main_menu > ul {
+            font-family: '210 M고딕 030';
+            position: relative;
+            display: block;
+            width: 1%;
+            z-index: 500;
+        }
+
+        .main_menu:after, .main_menu > ul:after {
+            content: ".";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+
+        .main_menu.align-right > ul > li {
+            float: right;
+        }
+
+        .main_menu.align-center ul {
+            text-align: center;
+        }
+
+        .main_menu.align-center ul ul {
+            text-align: left;
+        }
+
+        .main_menu > ul > li {
+            display: inline-block;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main_menu > ul > #menu-button {
+            display: none;
+        }
+
+        .main_menu ul li a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .main_menu > ul > li > a {
+            font-size: 15px;
+            padding: 13px 15px;
+            color: #000000;
+            text-transform: uppercase;
+        }
+
+        .main_menu > ul > li.sub > a {
+            padding-right: 30px;
+        }
+
+        .main_menu > ul > li:hover > a {
+            color: #ea2965;
+        }
+
+        .main_menu li.sub::after {
+            display: block;
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+
+
+        .main_menu > ul > li.sub::after {
+            right: 10px;
+            top: 20px;
+            border: 5px solid transparent;
+            border-top-color: black;
+        }
+
+        .main_menu ul > li:hover::after {
+            border-top-color: #ea2965;
+        }
+
+        .main_menu ul ul {
+            position: absolute;
+            left: -9999px;
+            top: 100px;
+            opacity: ;
+            -webkit-transition: opacity .1s ease, top .25s ease;
+            -moz-transition: opacity .1s ease, top .25s ease;
+            -ms-transition: opacity .1s ease, top .25s ease;
+            -o-transition: opacity .1s ease, top .25s ease;
+            transition: opacity .1s ease, top .25s ease;
+            z-index: 1000;
+        }
+
+        .main_menu ul ul ul {
+            top: 37px;
+            padding-left: 5px;
+        }
+
+        .main_menu ul ul li {
+            position: relative;
+        }
+
+        .main_menu > ul > li:hover > ul {
+            left: auto;
+            top: 44px;
+            opacity: 1;
+        }
+
+        .main_menu.align-right > ul > li:hover > ul {
+            left: auto;
+            right: 0;
+            opacity: 1;
+        }
+
+        .main_menu ul ul li:hover > ul {
+            left: 170px;
+            top: 0;
+            opacity: 1;
+        }
+
+        .main_menu.align-right ul ul li:hover > ul {
+            left: auto;
+            right: 170px;
+            top: 0;
+            opacity: 1;
+            padding-right: 5px;
+        }
+
+        .main_menu ul ul li a {
+            width: 130px;
+            padding: 10px 20px;
+            font-size: 12px;
+            text-align: left;
+            color: black;
+            background: rgba(255, 255, 255, 0.71);
+            -webkit-transition: all .35s ease;
+            -moz-transition: all .35s ease;
+            -ms-transition: all .35s ease;
+            -o-transition: all .35s ease;
+            transition: all .35s ease;
+        }
+
+        .main_menu.align-right ul ul li a {
+            text-align: right;
+        }
+
+        .main_menu ul ul li:hover > a {
+            background-color: #ea2965;
+            color: white;
+        }
+
+        .main_menu ul ul li:last-child > a, .main_menu ul ul li.last > a {
+            border-bottom: 0;
+        }
+            
+        .main_menu.align-right ul ul li.sub:hover::after {
+            border-right-color: #ffffff;
+            border-left-color: transparent;
+            left: -5px;
+            -webkit-transform: rotateY (180deg);
+            -ms-transform: rotateY (180deg);
+            -moz-transform: rotateY (180deg);
+            -o-transform: rotateY (180deg);
+            transform: rotateY (180deg);
         }
         /* 저작권 */
             #footer {
@@ -126,26 +320,72 @@
 </head>
     
 <body>
-   <!-- 메뉴 -->
- <div id="headC">
-            <ul id="h_menu">
-                <li><a href="hw01.html" target="_blank">과제01</a></li>
-                <li><a href="hw02.html" target="_blank">과제02</a></li>
-                <li><a href="hw03.html" target="_blank">과제03</a></li>
-                <li><a href="hw04.html" target="_blank">과제04</a></li>
-                <li><a href="hw05.html" target="_blank">과제05</a></li>
-                <li><a href="hw06.html" target="_blank">과제06</a></li>
-                <li><a href="portfolio.html" target="_blank">Portfolio</a></li>
-                <li><a href="contact.html" target="_blank">Contact</a></li>
-            </ul>
-            </div>
- <!-- 프로필 버튼 -->
-       <div id="logo">
-       <h1><a href="index.html">J.Princess</a></h1>
+   <!-- 헤더 -->
+  <header>
+   <div id="headA">
+       <h1 id= "headA_h1">
+       <a href="index.html" onMouseOver="this.innerHTML='나는 0쥬다'" onMouseOut="this.innerHTML='♥'">♥</a>
+       </h1>
        </div>
-    <!--   float 해제    -->
+            <div class="main_menu">
+            <ul>
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./profile.html">About</a>
+                </li>
+                <li class="active sub">
+                    <a href="hw.html">Homework</a>
+                    <ul>
+                        <li class="sub">
+                            <a href="">HTML</a>
+    <!--     HTML 과제 하위목록       -->
+                            <ul>
+                                <li>
+                                    <a href="./hw01.html">Hw01</a>
+                                </li>
+                                <li>
+                                    <a href="./hw02.html">Hw02</a>
+                                </li>
+                                <li class="last">
+                                    <a href="./hw03.html">Hw03</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub">
+                            <a href="">CSS</a>
+    <!--     CSS 과제 하위목록       -->
+                            <ul>
+                                <li>
+                                    <a href="./hw04.html">Hw04</a>
+                                </li>
+                                <li>
+                                    <a href="./hw05.html">Hw05</a>
+                                </li>
+                                <li>
+                                    <a href="./hw06.html">Hw06</a>
+                                </li>
+                                <li class="last">
+                                    <a href="./contact.html">Hw07</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./portfolio.html">Portfolio</a>
+                </li>
+                <li class="last">
+                    <a href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        </header>
+        
+    <!-- float 해제-->
     <div class="clear"></div>
-
+    
     <!--    본문 내용 시작    -->
     <div id="wrapper">
         <h1 id="contact">Contact</h1>
