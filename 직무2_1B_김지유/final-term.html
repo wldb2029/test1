@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>쥬의 로그</title>
+    
+    <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            
+            body {
+                font-family: '210 M고딕 030', '210 M고딕 040', '210 M고딕 050', '210 트리거' '210 수명조 040';
+                background-color: #fafafa;
+            }
+            
+            /* 헤더 */
+            header {
+                max-width: 1200px;
+            }
+            
+            /* 사이트 이름 */
+            #headA #headA_h1 a{
+                display: inline-block;
+                padding-top: 100px;
+                padding-left: 750px;
+                padding-bottom: 70px;
+                line-height: 0;
+                color: #ea2965;
+                font-size: 32px;
+                text-decoration: none;
+                font-family: "모리스9"
+            }
+    
+            #headA #headA_h1 a:hover {
+                color: black;
+                text-align: center;
+                font-size: 15px;
+                padding-left: 730px;
+                text-decoration: none;
+                font-family: "210 트리거";
+            }
+            }
+            #headA {
+                max-width: 1000px;
+                float: left;
+            }
+            #headC {
+                float: right;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                margin-right: 15px;
+                color: #ffffff;
+                padding-bottom: 16px;
+            }
+            
+        /* 메인 메뉴 */
+        .main_menu {
+            font-family: '210 M고딕 050';
+            position: fixed;
+            right: 50%;
+            top: 170px;
+            width: 120px;
+            margin-right: 600px;
+            text-align: center;
+    
+        }
+
+        .main_menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .main_menu ul li {
+            transition: 0.3s;
+        }
+
+        .main_menu ul li:hover {
+            border-bottom: 1.5px solid #ea2965;
+            font-family: '모리스9'
+        }
+
+        .main_menu > ul {
+            font-family: '210 M고딕 030';
+            position: relative;
+            display: block;
+            width: 1%;
+            z-index: 500;
+        }
+
+        .main_menu:after, .main_menu > ul:after {
+            content: ".";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+
+        .main_menu.align-right > ul > li {
+            float: right;
+        }
+
+        .main_menu.align-center ul {
+            text-align: center;
+        }
+
+        .main_menu.align-center ul ul {
+            text-align: left;
+        }
+
+        .main_menu > ul > li {
+            display: inline-block;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main_menu > ul > #menu-button {
+            display: none;
+        }
+
+        .main_menu ul li a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .main_menu > ul > li > a {
+            font-size: 15px;
+            padding: 13px 15px;
+            color: #000000;
+            text-transform: uppercase;
+        }
+
+        .main_menu > ul > li.sub > a {
+            padding-right: 30px;
+        }
+
+        .main_menu > ul > li:hover > a {
+            color: #ea2965;
+        }
+
+        .main_menu li.sub::after {
+            display: block;
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+
+
+        .main_menu > ul > li.sub::after {
+            right: 10px;
+            top: 20px;
+            border: 5px solid transparent;
+            border-top-color: black;
+        }
+
+        .main_menu ul > li:hover::after {
+            border-top-color: #ea2965;
+        }
+
+        .main_menu ul ul {
+            position: absolute;
+            left: -9999px;
+            top: 100px;
+            opacity: ;
+            -webkit-transition: opacity .1s ease, top .25s ease;
+            -moz-transition: opacity .1s ease, top .25s ease;
+            -ms-transition: opacity .1s ease, top .25s ease;
+            -o-transition: opacity .1s ease, top .25s ease;
+            transition: opacity .1s ease, top .25s ease;
+            z-index: 1000;
+        }
+
+        .main_menu ul ul ul {
+            top: 37px;
+            padding-left: 5px;
+        }
+
+        .main_menu ul ul li {
+            position: relative;
+        }
+
+        .main_menu > ul > li:hover > ul {
+            left: auto;
+            top: 44px;
+            opacity: 1;
+        }
+
+        .main_menu.align-right > ul > li:hover > ul {
+            left: auto;
+            right: 0;
+            opacity: 1;
+        }
+
+        .main_menu ul ul li:hover > ul {
+            left: 170px;
+            top: 0;
+            opacity: 1;
+        }
+
+        .main_menu.align-right ul ul li:hover > ul {
+            left: auto;
+            right: 170px;
+            top: 0;
+            opacity: 1;
+            padding-right: 5px;
+        }
+
+        .main_menu ul ul li a {
+            width: 130px;
+            padding: 10px 20px;
+            font-size: 12px;
+            text-align: left;
+            color: black;
+            background: rgba(255, 255, 255, 0.71);
+            -webkit-transition: all .35s ease;
+            -moz-transition: all .35s ease;
+            -ms-transition: all .35s ease;
+            -o-transition: all .35s ease;
+            transition: all .35s ease;
+        }
+
+        .main_menu.align-right ul ul li a {
+            text-align: right;
+        }
+
+        .main_menu ul ul li:hover > a {
+            background-color: #ea2965;
+            color: white;
+        }
+
+        .main_menu ul ul li:last-child > a, .main_menu ul ul li.last > a {
+            border-bottom: 0;
+        }
+            
+        .main_menu.align-right ul ul li.sub:hover::after {
+            border-right-color: #ffffff;
+            border-left-color: transparent;
+            left: -5px;
+            -webkit-transform: rotateY (180deg);
+            -ms-transform: rotateY (180deg);
+            -moz-transform: rotateY (180deg);
+            -o-transform: rotateY (180deg);
+            transform: rotateY (180deg);
+        }
+        
+        /* 본문 2단 그리드 배열 */
+        
+        #grid {
+        width : 85%; 
+        height : 50%;
+        float: right;
+        overflow: hidden;
+        }
+        
+        .wrapper {
+            width: 1090px;
+            background: #ffffff;
+            border-radius: 3%;
+            padding-top: 80px;
+            display: grid;
+            grid-template-columns: 350px 700px;
+        }
+        
+       /* 목록 */
+        
+        #index {
+            list-style-type: none;
+            font-family: '210 수명조 020';
+        }
+        
+        .index {
+            margin: 0 0 30px 30px;
+            border-bottom: 1px solid #a5a5a5;
+            color: #6c6c6c;
+            font-size: 18px;
+        }
+        
+        .index:hover {
+            transition: 0.3s;
+            color: #ea2965;
+            font-family: '210 수필명조 020';
+            border-bottom: 1px solid #ea2965;
+            font-size: 18px;
+        }
+        
+        /* 갤러리 */
+        .col2 {
+            padding: 0 0 0 30px;
+            column-width: 320px;
+            column-gap: 15px;
+        }
+        
+        .col2 figure {
+            display: inline-block;
+            margin: 0;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+        
+        .col2 figure img {
+            width: 100%;
+        }
+        
+        .col2 figure img:hover {
+            transform: scale(1.03);
+            transition: 0.3s;
+        }
+        
+        .col2 figure figcaption {
+            border-top: 1px solid rgba(0,0,0,0.2);
+            padding: 10px;
+            margin-top: 12px;
+        }
+        
+
+        
+    </style>
+    
+</head>
+<body>
+   <!-- 헤더 -->
+  <header>
+   <div id="headA">
+       <h1 id= "headA_h1">
+       <a href="index.html" onMouseOver="this.innerHTML='나는 0쥬다'" onMouseOut="this.innerHTML='♥'">♥</a>
+       </h1>
+       </div>
+            <div class="main_menu">
+            <ul>
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./profile.html">About</a>
+                </li>
+                <li class="active sub">
+                    <a href="hw.html">Homework</a>
+                    <ul>
+                        <li class="sub">
+                            <a href="">HTML</a>
+    <!--     HTML 과제 하위목록       -->
+                            <ul>
+                                <li>
+                                    <a href="./hw01.html">Hw01</a>
+                                </li>
+                                <li>
+                                    <a href="./hw02.html">Hw02</a>
+                                </li>
+                                <li class="last">
+                                    <a href="./hw03.html">Hw03</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub">
+                            <a href="">CSS</a>
+    <!--     CSS 과제 하위목록       -->
+                            <ul>
+                                <li>
+                                    <a href="./hw04.html">Hw04</a>
+                                </li>
+                                <li>
+                                    <a href="./hw05.html">Hw05</a>
+                                </li>
+                                <li>
+                                    <a href="./hw06.html">Hw06</a>
+                                </li>
+                                <li class="last">
+                                    <a href="./contact.html">Hw07</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./portfolio.html">Portfolio</a>
+                </li>
+                <li class="last">
+                    <a href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        </header>
+        
+    <!-- float 해제-->
+    <div class="clear"></div>
+    
+    <!-- 2단 그리드 시작-->
+    <section id="grid" >
+        <div class="wrapper">
+           <div class="col1">
+             <ul id="index">
+                 <li id="t1" class="index">2017.12.31~2018.01.02 부산</li>
+                 <li id="t2" class="index">2018.01.29~02.01 일본 - 오사카 </li>
+                 <li id="t3" class="index">2018.06.25~26 대천 해수욕장</li>
+                 <li id="t4" class="index">2018.07.31~08.02 전남</li>
+                 <li id="t5" class="index">2018.08.13~15 오션월드</li>
+                 <li id="t6" class="index">2018.11.10 종로 나들이</li>
+             </ul>
+           </div> 
+           <div class="col2">
+              <!-- 부산 -->
+                  <div class="tr1">
+                   <figure>
+                        <img src="./img/tr1.jpg">
+                        <figcaption>해운대</figcaption>
+                   </figure>
+                   <figure>
+                        <img src="./img/tr2.jpg">
+                        <figcaption>죽성드림성당</figcaption>
+                   </figure>
+                   <figure>
+                        <img src="./img/tr11.jpg">
+                        <figcaption>씨라이프 아쿠아리움</figcaption>
+                   </figure>
+                   </div>
+                   
+               <!-- 일본 -->
+                  <div class="tr2">
+                   <figure>
+                        <img src="./img/tr9.jpg">
+                        <figcaption>하루카스 300</figcaption>
+                   </figure>
+                   <figure>
+                        <img src="./img/tr7.jpg">
+                        <figcaption>유니버셜 헤리포터 존</figcaption>
+                   </figure>
+                   <figure>
+                        <img src="./img/tr12.jpg">
+                        <figcaption>교토 야사카 신사</figcaption>
+                   </figure>
+                   <figure>
+                        <img src="./img/tr13.jpg">
+                        <figcaption>도톤보리 글리코상</figcaption>
+                   </figure>
+                   <figure>
+                        <img src="./img/tr14.jpg">
+                        <figcaption></figcaption>
+                   </figure>
+                   </div>
+                   
+                <!-- 대천 -->
+                   <div class="tr3">
+                    <figure>
+                        <img src="./img/tr15.jpg">
+                        <figcaption>대천 해수욕장</figcaption>
+                       </figure>
+                       <figure>
+                            <img src="./img/tr16.jpg">
+                            <figcaption></figcaption>
+                       </figure>
+                       <figure>
+                            <img src="./img/tr17.jpg">
+                            <figcaption>조개구이 무한리필</figcaption>
+                       </figure>
+                       <figure>
+                            <img src="./img/tr18.jpg">
+                            <figcaption></figcaption>
+                       </figure>
+                   </div>
+                   
+                   <!-- 전남 -->
+                   <div class="tr4">
+                    <figure>
+                        <img src="./img/tr3.jpg">
+                        <figcaption>여수 향일암</figcaption>
+                       </figure>
+                       <figure>
+                            <img src="./img/tr4.jpg">
+                            <figcaption>여수 크루즈</figcaption>
+                       </figure>
+                       <figure>
+                            <img src="./img/tr10.jpg">
+                            <figcaption>춘천 국립공원</figcaption>
+                       </figure>
+                   </div>
+                   
+                   <!-- 홍천 -->
+                   <div class="tr5">
+                    <figure>
+                        <img src="./img/tr6.jpg">
+                        <figcaption>소노빌리지</figcaption>
+                       </figure>
+                       <figure>
+                            <img src="./img/tr19.jpg">
+                            <figcaption>소노빌리지 야경</figcaption>
+                       </figure>
+                       <figure>
+                            <img src="./img/tr5.jpg">
+                            <figcaption>오션월드</figcaption>
+                       </figure>
+                   </div>
+                   
+                   <!-- 종로 -->
+                   <div class="tr6">
+                   <figure>
+                        <img src="./img/tr22.jpg">
+                        <figcaption>종로 3거리의 풍경</figcaption>
+                       </figure>
+                    <figure>
+                        <img src="./img/tr20.jpg">
+                        <figcaption>청계천 서울 빛초롱 축제 소원등</figcaption>
+                       </figure>
+                       <figure>
+                            <img src="./img/tr21.jpg">
+                            <figcaption>서울 빛초롱 축제</figcaption>
+                       </figure>
+                   </div>
+                
+           </div>
+        </div>
+    </section>
+</body>
+</html>

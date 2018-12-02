@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <style>
+              
+        /* 메인 메뉴 */
+        .main_menu {
+            font-family: '210 M고딕 050';
+            position: fixed;
+            right: 50%;
+            top: 150px;
+            width: 120px;
+            margin-right: 600px;
+            text-align: center;
+    
+        }
+
+        .main_menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .main_menu ul li {
+            transition: 0.3s;
+        }
+
+        .main_menu ul li:hover {
+            border-bottom: 1.5px solid #ea2965;
+            font-family: '모리스9'
+        }
+
+        .main_menu > ul {
+            font-family: '210 M고딕 030';
+            position: relative;
+            display: block;
+            width: 1%;
+            z-index: 500;
+        }
+
+        .main_menu:after, .main_menu > ul:after {
+            content: ".";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+
+        .main_menu.align-right > ul > li {
+            float: right;
+        }
+
+        .main_menu.align-center ul {
+            text-align: center;
+        }
+
+        .main_menu.align-center ul ul {
+            text-align: left;
+        }
+
+        .main_menu > ul > li {
+            display: inline-block;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main_menu > ul > #menu-button {
+            display: none;
+        }
+
+        .main_menu ul li a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .main_menu > ul > li > a {
+            font-size: 15px;
+            padding: 13px 15px;
+            color: #000000;
+            text-transform: uppercase;
+        }
+
+        .main_menu > ul > li.sub > a {
+            padding-right: 30px;
+        }
+
+        .main_menu > ul > li:hover > a {
+            color: #ea2965;
+        }
+
+        .main_menu li.sub::after {
+            display: block;
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+
+        .main_menu > ul > li.sub::after {
+            right: 10px;
+            top: 20px;
+            border: 5px solid transparent;
+            border-top-color: black;
+        }
+
+        .main_menu ul > li:hover::after {
+            border-top-color: #ea2965;
+        }
+
+        .main_menu ul ul {
+            position: absolute;
+            left: -9999px;
+            top: 100px;
+            opacity: ;
+            -webkit-transition: opacity .1s ease, top .25s ease;
+            -moz-transition: opacity .1s ease, top .25s ease;
+            -ms-transition: opacity .1s ease, top .25s ease;
+            -o-transition: opacity .1s ease, top .25s ease;
+            transition: opacity .1s ease, top .25s ease;
+            z-index: 1000;
+        }
+
+        .main_menu ul ul ul {
+            top: 37px;
+            padding-left: 5px;
+        }
+
+        .main_menu ul ul li {
+            position: relative;
+        }
+
+        .main_menu > ul > li:hover > ul {
+            left: auto;
+            top: 44px;
+            opacity: 1;
+        }
+
+        .main_menu.align-right > ul > li:hover > ul {
+            left: auto;
+            right: 0;
+            opacity: 1;
+        }
+
+        .main_menu ul ul li:hover > ul {
+            left: 170px;
+            top: 0;
+            opacity: 1;
+        }
+
+        .main_menu.align-right ul ul li:hover > ul {
+            left: auto;
+            right: 170px;
+            top: 0;
+            opacity: 1;
+            padding-right: 5px;
+        }
+
+        .main_menu ul ul li a {
+            width: 130px;
+            padding: 10px 20px;
+            font-size: 12px;
+            text-align: left;
+            color: black;
+            background: rgba(255, 255, 255, 0.71);
+            -webkit-transition: all .35s ease;
+            -moz-transition: all .35s ease;
+            -ms-transition: all .35s ease;
+            -o-transition: all .35s ease;
+            transition: all .35s ease;
+        }
+
+        .main_menu.align-right ul ul li a {
+            text-align: right;
+        }
+
+        .main_menu ul ul li:hover > a {
+            background-color: #ea2965;
+            color: white;
+        }
+
+        .main_menu ul ul li:last-child > a, .main_menu ul ul li.last > a {
+            border-bottom: 0;
+        }
+            
+        .main_menu.align-right ul ul li.sub:hover::after {
+            border-right-color: #ffffff;
+            border-left-color: transparent;
+            left: -5px;
+            -webkit-transform: rotateY (180deg);
+            -ms-transform: rotateY (180deg);
+            -moz-transform: rotateY (180deg);
+            -o-transform: rotateY (180deg);
+            transform: rotateY (180deg);
+        }
+            
+        
+     /* 본문 */
+        h2 {
+            font-family: "210 M고딕 050";
+            text-align: center;
+        
+        }
+        h3 {
+            text-align: center;
+        }
+        li {
+            list-style-type: none;
+        }
+        .content {
+            text-align: center;
+            margin: 100px;
+        }
+        
+        /* 이미지 배열 */
+        #video_image1 {
+            float:left;
+            text-align: center;
+            margin: 5px;
+            display: block;
+        }
+        #video_image2 {
+            float:left;
+            text-align: center;
+            margin: 5px;
+            display: block;
+        }
+        #design_image {
+            float:left;
+            text-align: center;
+            margin: 5px;
+            display: block;
+        }
+        #cardnews_image {
+            float:left;
+            text-align: center;
+            margin: 5px;
+            display: block;
+        }
+        #etc_image1 {
+            float:left;
+            text-align: center;
+            padding-right: 1200px;
+            padding-left: 210px;
+            margin: 5px;
+        }
+        #etc_image2 {
+            float:left;
+            text-align: center;
+            margin: 5px;
+            display: block;
+        }
+        .clear {
+            clear:left
+        }
+        
+     
+       /* 저작권 */
+            #footer {
+                border-top: 1px solid #dddddd;
+                margin-top: 20px;
+                margin-bottom: 30px;
+            }
+            #footer p {
+                font-size: 14px;
+                color: #666666;
+                margin-left: 15px;
+                margin-top: 5px;
+            }
+            #footer span {
+                font-size: 12px;
+                font-weight: normal;
+                margin-left: 14px;
+            }
+
+    </style>
+</head>
+<body>
+ <!-- 헤더 -->
+  <header>
+  
+            <div class="main_menu">
+            <ul>
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./profile.html">About</a>
+                </li>
+                <li class="active sub">
+                    <a href="hw.html">Homework</a>
+                    <ul>
+                        <li class="sub">
+                            <a href="">HTML</a>
+    <!--     HTML 과제 하위목록       -->
+                            <ul>
+                                <li>
+                                    <a href="./hw01.html">Hw01</a>
+                                </li>
+                                <li>
+                                    <a href="./hw02.html">Hw02</a>
+                                </li>
+                                <li class="last">
+                                    <a href="./hw03.html">Hw03</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub">
+                            <a href="">CSS</a>
+    <!--     CSS 과제 하위목록       -->
+                            <ul>
+                                <li>
+                                    <a href="./hw04.html">Hw04</a>
+                                </li>
+                                <li>
+                                    <a href="./hw05.html">Hw05</a>
+                                </li>
+                                <li>
+                                    <a href="./hw06.html">Hw06</a>
+                                </li>
+                                <li class="last">
+                                    <a href="./contact.html">Hw07</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./portfolio.html">Portfolio</a>
+                </li>
+                <li class="last">
+                    <a href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        </header>
+       
+   <!-- 서론 -->
+    <ul>
+        <li>Video design</li>
+        <li>Web design</li>
+        <li>Card news</li>
+        <li>Etc</li>
+    </ul>
+    <hr>  
+    
+    <!-- 본문 -->
+    <h2>Video design</h2>
+      <ol>
+       <li><h3>스냅스 광고</h3>
+           <div id="video_image1">
+            <img src="./img/video1-1.jpg" alt="비디오1" width="400">
+            <img src="./img/video1-2.jpg" alt="비디오1" width="400">
+            <img src="./img/video1-3.jpg" alt="비디오1" width="400">
+            <img src="./img/video1-4.jpg" alt="비디오1" width="400">
+               </div>
+                <p class="content">아이돌의 개인굿즈를 만들 수 있는 스냅스 앱 광고.<br>Adobe Primer를 이용하여 제작하였고, 타자를 치는 효과, 색감 보정 등을 이용해 발랄한 분위기를 냈다.  </p>
+        </li> 
+        <li><h3>카스x야놀자 콜라보 광고</h3>
+           <div id="video_image2">
+            <img src="./img/video2-1.jpg" alt="비디오1" width="400">
+            <img src="./img/video2-2.jpg" alt="비디오1" width="400">
+            <img src="./img/video2-3.jpg" alt="비디오1" width="400">
+               </div>
+                <p class="content">맥주 브랜드 cass와 숙박앱 야놀자의 콜라보레이션을 기획해 제작한 광고.<br>"카스와 함께, 어디든지 야놀자!" 라는 슬로건을 내세워 20대 청춘들을 타깃으로 경쾌한 느낌으로 제작했다.</p>
+        </li> 
+      </ol>
+    <hr>
+    <h2>Web design</h2>
+    <h3>데이비드 카슨</h3>
+       <div id="design_image">
+        <img src="./img/design1.png" alt="디자인1" width="400">
+        <img src="./img/design2.png" alt="디자인1" width="400">
+        <img src="./img/design3.png" alt="디자인1" width="400">
+           </div>
+            <p class="content">1990년대에 미국의 팝 아트디렉터로 떠오른 데이비드 카슨을 주제로 한 웹페이지.<br> 카슨 특유의 해체주의 감성을 이용하여 컨셉을 잡았다. </p>
+    <hr>
+    <h2>Card news</h2>
+    <h3>오만과 편견 재해석</h3>
+       <div id="cardnews_image">
+        <img src="./img/001.png" alt="카드뉴스1" width="300">
+        <img src="./img/002.png" alt="카드뉴스2" width="300">
+        <img src="./img/003.png" alt="카드뉴스3" width="300">
+        <img src="./img/004.png" alt="카드뉴스4" width="300">
+        <img src="./img/005.png" alt="카드뉴스5" width="300">
+        <img src="./img/006.png" alt="카드뉴스6" width="300">
+        <img src="./img/007.png" alt="카드뉴스7" width="300">
+        <img src="./img/008.png" alt="카드뉴스8" width="300">
+        <img src="./img/009.png" alt="카드뉴스9" width="300">
+        <img src="./img/010.png" alt="카드뉴스10" width="300">
+           </div>
+            <p class="content">고전 소설 "오만과 편견"을 현대 sns의 특징과 타겟층을 조사해 새롭게 재해석한<br> 만화 카드 뉴스. 10대를 대상으로 '인터넷 소설ver'이라는 주제를 잡아 스토리를 변형시켰다.</p>
+    <hr>
+    <h2>Etc</h2>
+    <ul>
+       <li><h3>나의 인포그래픽-도트</h3>
+           <div id="etc_image1">
+            <img src="./img/info1.jpg" alt="인포1" width="300">
+               </div>
+        </li>
+        <li><h3>나의 인포그래픽-사진</h3>
+           <div id="etc_image2">
+            <img src="./img/info2.jpg" alt="인포2" width="400">
+            <img src="./img/info2-1.jpg" alt="인포3" width="400">
+               </div>
+                <p class="content">나의 정보를 기반으로 디자인하고 작성한 인포그래픽.<br></p>
+        </li>
+    </ul>
+    
+    <!-- 저작권 -->
+    <footer>
+        <div id="footer">
+            <p>
+                Copylight &copy <a href="index.html" class="site">J.princess</a> ALL rights reserved.
+            </p>
+            <span>EMAIL : zbxl444@naver.com</span>
+        </div>
+    </footer>
+</body>
+</html>
